@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>works_kaoBus</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<div class="wrapper">
+
+<div class="maincontent">
+		
+	
+	<div class="box">
+	
+   <a href="../index.html" class="fix"><div class="close"><img src="../img/close.png"></div>
+	    <div class="title" >
+	    <div class="chaffle caption_1" data-lang="en">かおバス</div>
+	    <div class="caption_2">ワークショップ</div>
+		</div></a>
+	
+		<div class="box_content">
+		<img src="kaoBus1.JPG">
+		<img src="kaoBus2.JPG">
+		<img src="kaobus3.JPG">
+		<img src="kaoBus4.JPG">
+		<img src="kaoBus5.JPG">
+		<img src="kaoBus6.JPG">
+		<img src="kaoBus7.JPG">
+			<div class="index">
+			<p>カッティングシートで作られた各パーツから好きなものを選び</p>
+			<p>バスの車体に描かれた輪郭に貼り、顔をつくってもらう</p>
+			<p>飾ったバスは徳島県内で２年間運行</p>
+		</div>
+		</div>
+	</div>
+	
+
+</div>					
+</div>
+
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<script src="../itoMap/js/chaffle.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.chaffle').chaffle({
+    speed: 10,
+    time: 100
+  });
+});
+</script>
+
+<script src="../itoMap/js/jquery.inview.min.js"></script>
+<script>
+$(function() {
+$('.fade').css('opacity', 0);
+$('.fade').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+	if (isInView) {
+		$(this).stop().animate({opacity: 1}, 500);
+	}
+	else {
+		$(this).stop().animate({opacity: 0}, 500);
+	}
+});
+});
+</script>
+
+
+</body>
+</html>

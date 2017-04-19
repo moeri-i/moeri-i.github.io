@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>works_hyakuraku</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<div class="wrapper">
+
+<div class="maincontent">
+		
+	
+	<div class="box">
+	
+   <a href="../index.html" class="fix"><div class="close"><img src="../img/close.png"></div>
+	    <div class="title" >
+	    <div class="chaffle caption_1" data-lang="en">銀座百楽</div>
+	    <div class="caption_2">webサイト</div>
+		</div></a>
+	
+		<div class="box_content">
+			<img src="hyakuraku-01.png">
+			<img src="hyakuraku-02.png">
+			<img src="hyakuraku-03.png">
+			<div class="index">
+		</div>
+		</div>
+	</div>
+	
+
+</div>					
+</div>
+
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<script src="js/chaffle.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.chaffle').chaffle({
+    speed: 10,
+    time: 100
+  });
+});
+</script>
+
+<script src="js/jquery.inview.min.js"></script>
+<script>
+$(function() {
+$('.fade').css('opacity', 0);
+$('.fade').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+	if (isInView) {
+		$(this).stop().animate({opacity: 1}, 500);
+	}
+	else {
+		$(this).stop().animate({opacity: 0}, 500);
+	}
+});
+});
+</script>
+
+
+</body>
+</html>

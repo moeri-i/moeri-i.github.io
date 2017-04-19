@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>works_cocoiku</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<div class="wrapper">
+
+<div class="maincontent">
+		
+	
+	<div class="box">
+	
+   <a href="../index.html" class="fix"><div class="close"><img src="../img/close.png"></div>
+	    <div class="title" >
+	    <div class="chaffle caption_1" data-lang="en">cocoiku</div>
+	    <div class="caption_2">ワークショップ企画</div>
+		</div></a>
+	
+		<div class="box_content">
+			<img src="cocoiku1.jpg">
+			<img src="cocoiku2.jpg">
+			<img src="cocoiku5.jpg">
+			<img src="cocoiku3.jpg">
+			<img src="cocoiku4.jpg">
+			<div class="index">
+		    <p>伊勢丹新宿店が提供する幼児向けワークショップスペース「cocoiku」</p>
+		    <p>１周年記念企画「しらべてつくる、わたしのおみせ」</p>
+		    <p>伊勢丹の店舗の見学で得たヒントをもとに、自分だけのショーウィンドウをつくる</p>
+		    <p><a href="https://www.facebook.com/isetancocoiku/posts/968849599831205" target="_blank">当日の様子はcocoiku facebookページにて</a></p>
+		</div>
+		</div>
+	</div>
+	
+
+</div>					
+</div>
+
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<script src="js/chaffle.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.chaffle').chaffle({
+    speed: 10,
+    time: 100
+  });
+});
+</script>
+
+<script src="js/jquery.inview.min.js"></script>
+<script>
+$(function() {
+$('.fade').css('opacity', 0);
+$('.fade').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+	if (isInView) {
+		$(this).stop().animate({opacity: 1}, 500);
+	}
+	else {
+		$(this).stop().animate({opacity: 0}, 500);
+	}
+});
+});
+</script>
+
+
+</body>
+</html>
