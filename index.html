@@ -2,90 +2,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
 <title>MOERI ITO WORKS</title>
 <link href="style.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script type="text/javascript">       
-$(function(){
-  var $btn = $('.btn [data-filter]'),
-  $list = $('.list [category]');
-   
-  $btn.on('click', function(e) {
-    e.preventDefault();
-     
-    var $btnTxt = $(this).attr('data-filter');
-     
-    if ($btnTxt == 'all'){
-      $list.fadeOut().promise().done(function() {
-        $list.addClass('animate').fadeIn();
-      });
-    } else {
-      $list.fadeOut().promise().done(function() {
-        $list.filter('[category = "' + $btnTxt + '"]').addClass('animate').fadeIn();
-      });
-    }
-  });
-})
-</script>
-    
-<style type="text/css">body{background: #F4F4F4;}</style>
-    
 </head>
 
 <body>
-    
 
-<div class="wrapper">
-
-<div class="content">
-    
-    <div class="head">
-        <h1>MOERI ITO WORKS</h1><a href="prof.html"><span>PROF ＞</span></a>
+<div class="container">
+  <div class="box">
+    <div class="inner"><a href="https://drive.google.com/file/d/1rUWGeT7ypH4NybgMtTRM4nqAZxYvCCnv/view"><img src="link.png"></a></div>
     </div>
-    
-    <div class="btn">
-        <a href="" data-filter="all">all</a>
-        <a href="" data-filter="web">web</a>
-        <a href="" data-filter="package">package</a>
-        <a href="" data-filter="leaflet">leaflet</a>
-        <a href="" data-filter="other">other</a>
-    </div> 
-    
-    <div class="list thumbnail_wrapper">
+</div>  
 
-        <a href="michikozakura/index.html" class="thumbnail" category="package"><img src="michikozakura/michikozakura.jpg"></a> 
-        <a href="insideout/index.html" class="thumbnail" category="leaflet"><img src="insideout/insideout.jpg"></a>
-        <a href="telete/index.html" class="thumbnail" category="leaflet"><img src="telete/telete.jpg"></a> 
-        <a href="michizakura/index.html" class="thumbnail" category="package"><img src="michizakura/michizakura.jpg"></a> 
-        <a href="michizakuraweb/index.html" class="thumbnail" category="web"><img src="michizakuraweb/michizakura.png"></a> 
-        <a href="mask/index.html" class="thumbnail" category="package"><img src="mask/mask.jpg"></a>
-        <a href="hanamiyama/index.html" class="thumbnail" category="other"><img src="hanamiyama/hanamiyama.jpg"></a>
-        <a href="candy/index.html" class="thumbnail" category="other"><img src="candy/candy.jpg"></a>
-        <a href="tenoproject/index.html" class="thumbnail" category="leaflet"><img src="tenoproject/tenoproject.png"></a>
-        <a href="sakuranigori/index.html" class="thumbnail" category="package"><img src="sakuranigori/sakuranigori.jpg"></a>
-        <a href="3clabo/index.html" class="thumbnail" category="other"><img src="3clabo/3clabo.png"></a>
-        <a href="chouonpa/index.html" class="thumbnail" category="web"><img src="chouonpa/chouonpa.png"></a>
-        <a href="setana/index.html" class="thumbnail" category="package"><img src="setana/setana.jpg"></a>
-        <a href="chouchou/index.html" class="thumbnail" category="web"><img src="chouchou/chouchou.png"></a>
-        <a href="harmony/index.html" class="thumbnail" category="leaflet"><img src="harmony/harmonyland.png"></a>
-        <a href="mygum/index.html" class="thumbnail" category="leaflet"><img src="mygum/mygum.jpg"></a>
-        <a href="fruitbo/index.html" class="thumbnail" category="package"><img src="fruitbo/fruitbo.png"></a>
-        <a href="oyomesan/index.html" class="thumbnail" category="package"><img src="oyomesan/oyomesan.jpg"></a>
-        <a href="renobeego/index.html" class="thumbnail" category="web"><img src="renobeego/renobeego.png"></a>
-        <a href="cocoiku/index.html" class="thumbnail" category="other"><img src="cocoiku/cocoiku.jpg"></a>
-        <a href="itomap/index.html" class="thumbnail" category="leaflet"><img src="itomap/itomap.png"></a>
-        <a href="ANAGENESE/index.html" class="thumbnail" category="leaflet"><img src="ANAGENESE/ANAGENESE.jpg"></a>
-        <a href="erdbeere/index.html" class="thumbnail" category="package"><img src="erdbeere/erdbeere.jpg"></a>
-        <a href="cocokara/index.html" class="thumbnail" category="other"><img src="cocokara/cocokara.jpg"></a>
-        <a href="kakchar/index.html" class="thumbnail" category="leaflet"><img src="kakchar/kakchar.jpg"></a>
-    
-    </div>
-    
- <div class="foot">© Moeri Ito</div>    
-    
-</div>    
-</div>   
-    
 </body>
 </html>
