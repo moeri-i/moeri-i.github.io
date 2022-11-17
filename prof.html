@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<title>MOERI ITO WORKS</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">       
+$(function(){
+  var $btn = $('.btn [data-filter]'),
+  $list = $('.list [category]');
+   
+  $btn.on('click', function(e) {
+    e.preventDefault();
+     
+    var $btnTxt = $(this).attr('data-filter');
+     
+    if ($btnTxt == 'all'){
+      $list.fadeOut().promise().done(function() {
+        $list.addClass('animate').fadeIn();
+      });
+    } else {
+      $list.fadeOut().promise().done(function() {
+        $list.filter('[category = "' + $btnTxt + '"]').addClass('animate').fadeIn();
+      });
+    }
+  });
+})
+</script>
+
+<style type="text/css">body{background: #F4F4F4;}</style>
+
+</head>
+    
+<body>
+    
+
+<div class="wrapper">
+
+<div class="content">
+    
+    <div class="head">
+        <a href="index.html"><h1>MOERI ITO WORKS</h1></a><a href=""><span>PROF ＞</span></a>
+    </div>
+    
+    <div class="works_wrapper"> 
+
+        <div class="prof"><img src="prof.png"></div>
+
+<h2>伊藤萌里<br>
+Design / Illust</h2>
+<p>
+1987年 東京の下町生まれ<br>
+2010年 多摩美術大学情報デザイン学科卒<br>
+<br>
+徳島県のまちづくり会社にて、お土産品の戦略からパッケージデザインまで企画開発などを経験<br>
+2013年に帰京し、独立。その後は多数の企業のブランディングおよび販促に関するグラフィック・Webデザインを中心に活動。また企業案件だけでなく、自治体や教育、NPOなどの活動もデザイン面で支援。<br>
+<br>
+CONTACT : moeri.ito(a)gmail.com
+</p>
+        
+    <a href="index.html"><div class="back">＜ WORKS</div></a>
+    </div>
+ 
+ <div class="foot">© Moeri Ito</div>    
+    
+</div>    
+</div>   
+
+<div class="foot"></div>    
+
+</body>
+</html>
