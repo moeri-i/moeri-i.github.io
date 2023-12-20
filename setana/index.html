@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<title>MOERI ITO WORKS</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">       
+$(function(){
+  var $btn = $('.btn [data-filter]'),
+  $list = $('.list [category]');
+   
+  $btn.on('click', function(e) {
+    e.preventDefault();
+     
+    var $btnTxt = $(this).attr('data-filter');
+     
+    if ($btnTxt == 'all'){
+      $list.fadeOut().promise().done(function() {
+        $list.addClass('animate').fadeIn();
+      });
+    } else {
+      $list.fadeOut().promise().done(function() {
+        $list.filter('[category = "' + $btnTxt + '"]').addClass('animate').fadeIn();
+      });
+    }
+  });
+})
+</script>
+</head>
+    
+<body>
+    
+
+<div class="wrapper">
+
+<div class="content">
+    
+    <div class="head">
+        <a href="../index.html"><h1>MOERI ITO WORKS</h1></a><a href="../prof.html"><span>PROF ＞</span></a>
+    </div>
+    
+    <div class="works_wrapper"> 
+        <div class="title">SetanA organic 有機バター</div>
+        <div class="info">
+            コンディトライ・エルトベーレ<br>
+            パッケージ / ロゴマーク<br>
+            2016. 11</div>
+        
+        <img src="1.jpg">
+        <img src="2.png">
+        <img src="3.png">
+        
+ <p>
+日本特有の気候と国土の狭さに加え、農林水産省が設ける厳しい水準を完璧にクリアすることが難しいため、有機乳製品の国内生産は、不可能に近いと言われ続けていました。それを可能にしたのが北海道・瀬棚（セタナ）にある有機牧場と小さな乳製品の加工ファクトリー。有機の未来を信じ、粛々と気の遠くなるほどの時間をかけて、日本で初めて乳製品で「有機JAS認証」を取得されました。その高い品質と強い志を受けて、気高くラグジュアリーな様相でロゴマークを制作、そして有機バターをパッケージしました。
+</p>
+    
+    <a href="../index.html"><div class="back">＜ BACK</div></a>
+    </div>
+ 
+ <div class="foot">© Moeri Ito</div>    
+    
+</div>    
+</div>   
+
+<div class="foot"></div>    
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<title>MOERI ITO WORKS</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">       
+$(function(){
+  var $btn = $('.btn [data-filter]'),
+  $list = $('.list [category]');
+   
+  $btn.on('click', function(e) {
+    e.preventDefault();
+     
+    var $btnTxt = $(this).attr('data-filter');
+     
+    if ($btnTxt == 'all'){
+      $list.fadeOut().promise().done(function() {
+        $list.addClass('animate').fadeIn();
+      });
+    } else {
+      $list.fadeOut().promise().done(function() {
+        $list.filter('[category = "' + $btnTxt + '"]').addClass('animate').fadeIn();
+      });
+    }
+  });
+})
+</script>
+</head>
+    
+<body>
+    
+
+<div class="wrapper">
+
+<div class="content">
+    
+    <div class="head">
+        <a href="../index.html"><h1>MOERI ITO WORKS</h1></a><a href=""><span>PROF ＞</span></a>
+    </div>
+    
+    <div class="works_wrapper"> 
+        <div class="title">新宿ここ・から広場　壁画制作ワークショップ</div>
+        <div class="info">
+            新宿区立子ども総合センター<br>
+            ワークショップ<br>
+            2014. 09</div>
+        
+        <img src="0.jpg">
+        <img src="1.jpg">
+        <img src="2.jpg">
+        <img src="3.jpg">
+        <img src="4.jpg">
+
+        
+ <p>
+学童施設や児童館、家庭支援センターなどを併設する、新宿区立子ども総合センター。その外壁にかける壁画をワークショップ形式で制作。<br>
+利用者の子どもたちに、施設内の様々な場所にいるキャラクターを制作してもらうワークショップを行いました。やってくる子どもたちは絵を描くのが好きな子ばかりでは無いため、簡単にキャラクターを設定＆描画できるワークシートを用意。つくってもらったキャラクターたちをトレースして配置し、全部で５枚の壁画としました。
+</p>
+    
+    <a href="../index.html"><div class="back">＜ BACK</div></a>
+    </div>
+ 
+ <div class="foot">© Moeri Ito</div>    
+    
+</div>    
+</div>   
+
+<div class="foot"></div>    
+
+</body>
+</html>

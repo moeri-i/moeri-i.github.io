@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<title>MOERI ITO WORKS</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">       
+$(function(){
+  var $btn = $('.btn [data-filter]'),
+  $list = $('.list [category]');
+   
+  $btn.on('click', function(e) {
+    e.preventDefault();
+     
+    var $btnTxt = $(this).attr('data-filter');
+     
+    if ($btnTxt == 'all'){
+      $list.fadeOut().promise().done(function() {
+        $list.addClass('animate').fadeIn();
+      });
+    } else {
+      $list.fadeOut().promise().done(function() {
+        $list.filter('[category = "' + $btnTxt + '"]').addClass('animate').fadeIn();
+      });
+    }
+  });
+})
+</script>
+</head>
+    
+<body>
+    
+
+<div class="wrapper">
+
+<div class="content">
+    
+    <div class="head">
+        <a href="../index.html"><h1>MOERI ITO WORKS</h1></a><a href="../prof.html"><span>PROF ＞</span></a>
+    </div>
+    
+    <div class="works_wrapper"> 
+        <div class="title">さくらにごり / 夏のにごり</div>
+        <div class="info">
+            三千櫻酒造株式会社<br>
+            ラベル / イラスト<br>
+            2019. 01 ~</div>
+        
+        <img src="1.jpg">
+        
+ <p>
+三千櫻酒造が、毎年春と夏に販売する微発泡にごり酒のラベルデザインのリニューアル。軽やかな甘みのある口当たりが人気であったため、さらに販路を拡大すべく「女性に手に取ってもらえるものを」というご依頼で制作しました。また、開栓注意のラベルも色味を合わせて制作し、瓶首に配置しました。<br>
+<br>
+さくらにごり：親しみやすい雰囲気の手描き調の桜のイラストを描画し、果実感のある香りを感じられるような可愛らしい印象でまとめました。<br>
+夏のにごり：北海道の広い大地と青空を配置したいというご依頼のもと、すっきりとした飲み口を感じられるようなシンプルな線を使ったイラストで描画しました。
+</p>
+    
+    <a href="../index.html"><div class="back">＜ BACK</div></a>
+    </div>
+ 
+ <div class="foot">© Moeri Ito</div>    
+    
+</div>    
+</div>   
+
+<div class="foot"></div>    
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<title>MOERI ITO WORKS</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">       
+$(function(){
+  var $btn = $('.btn [data-filter]'),
+  $list = $('.list [category]');
+   
+  $btn.on('click', function(e) {
+    e.preventDefault();
+     
+    var $btnTxt = $(this).attr('data-filter');
+     
+    if ($btnTxt == 'all'){
+      $list.fadeOut().promise().done(function() {
+        $list.addClass('animate').fadeIn();
+      });
+    } else {
+      $list.fadeOut().promise().done(function() {
+        $list.filter('[category = "' + $btnTxt + '"]').addClass('animate').fadeIn();
+      });
+    }
+  });
+})
+</script>
+</head>
+    
+<body>
+    
+
+<div class="wrapper">
+
+<div class="content">
+    
+    <div class="head">
+        <a href="../index.html"><h1>MOERI ITO WORKS</h1></a><a href="../prof.html"><span>PROF ＞</span></a>
+    </div>
+    
+    <div class="works_wrapper"> 
+        <div class="title">レノビーゴ</div>
+        <div class="info">
+            ゾンネボード製薬株式会社<br>
+            ウェブサイト / イラスト<br>
+            2016. 09</div>
+        
+        <img src="1.png">
+        <img src="2.png">
+        <img src="3.png">
+        <img src="4.png">
+        <img src="5.png">
+        
+ <p>
+むし歯予防のための低濃度フッ素配合液体スプレー「レノビーゴ」の販促用サイト。<br>
+まだ歯磨き粉を使って歯磨きのできない子どもをメインのターゲットとした商品であるため、知育教材などに使われるイメージで描画したイラストを配置。また、製品の安全性や、使い方を説明するページでもイラストを多用し、わかりやすさと親しみやすさの演出としました。<br>
+しかし、あくまでも医薬部外品であるため、エンタメ性を感じさせ過ぎることの無いよう、すっきりとした寒色で色味をまとめ、信頼感の表現としました。
+</p>
+    
+    <a href="../index.html"><div class="back">＜ BACK</div></a>
+    </div>
+ 
+ <div class="foot">© Moeri Ito</div>    
+    
+</div>    
+</div>   
+
+<div class="foot"></div>    
+
+</body>
+</html>

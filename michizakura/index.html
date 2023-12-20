@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<title>MOERI ITO WORKS</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">       
+$(function(){
+  var $btn = $('.btn [data-filter]'),
+  $list = $('.list [category]');
+   
+  $btn.on('click', function(e) {
+    e.preventDefault();
+     
+    var $btnTxt = $(this).attr('data-filter');
+     
+    if ($btnTxt == 'all'){
+      $list.fadeOut().promise().done(function() {
+        $list.addClass('animate').fadeIn();
+      });
+    } else {
+      $list.fadeOut().promise().done(function() {
+        $list.filter('[category = "' + $btnTxt + '"]').addClass('animate').fadeIn();
+      });
+    }
+  });
+})
+</script>
+</head>
+    
+<body>
+    
+
+<div class="wrapper">
+
+<div class="content">
+    
+    <div class="head">
+        <a href="../index.html"><h1>MOERI ITO WORKS</h1></a><a href="../prof.html"><span>PROF ＞</span></a>
+    </div>
+    
+    <div class="works_wrapper"> 
+        <div class="title">三千櫻酒造</div>
+        <div class="info">
+            三千櫻酒造株式会社<br>
+            ラベルデザイン<br>
+            2020. 11</div>
+        
+        <img src="1.jpg">
+        <img src="2.jpg">
+        <img src="3.JPG">
+        <img src="4.JPG">
+        
+ <p>
+岐阜県東川町から北海道東川町へ「現役の日本酒蔵が長距離を移動する」という三千櫻酒造の稀有な挑戦へ花を添える、ラベルデザインのリニューアルをお任せいただきました。<br>
+ファンのみなさまへのヒアリングで出た意見として多かった「綺麗な味わい」「絶妙な甘味と酸味のバランス」「最高の食通酒」と言った三千櫻の味わいのイメージを元に制作した、凛と立つイメージの細長い形のラベルは、酒販店で目立つ珍しいフォルムながらも、シンプルな構成により暮らしの食膳の中に溶け込む雰囲気を意識しました。
+</p>
+    
+    <a href="../index.html"><div class="back">＜ BACK</div></a>
+    </div>
+    
+     <div class="foot">© Moeri Ito</div>
+    
+</div>    
+</div>   
+    
+</body>
+</html>

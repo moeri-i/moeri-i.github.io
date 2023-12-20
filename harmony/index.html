@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<title>MOERI ITO WORKS</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">       
+$(function(){
+  var $btn = $('.btn [data-filter]'),
+  $list = $('.list [category]');
+   
+  $btn.on('click', function(e) {
+    e.preventDefault();
+     
+    var $btnTxt = $(this).attr('data-filter');
+     
+    if ($btnTxt == 'all'){
+      $list.fadeOut().promise().done(function() {
+        $list.addClass('animate').fadeIn();
+      });
+    } else {
+      $list.fadeOut().promise().done(function() {
+        $list.filter('[category = "' + $btnTxt + '"]').addClass('animate').fadeIn();
+      });
+    }
+  });
+})
+</script>
+</head>
+    
+<body>
+    
+
+<div class="wrapper">
+
+<div class="content">
+    
+    <div class="head">
+        <a href="../index.html"><h1>MOERI ITO WORKS</h1></a><a href="../prof.html"><span>PROF ＞</span></a>
+    </div>
+    
+    <div class="works_wrapper"> 
+        <div class="title">かみまちハーモニーランド</div>
+        <div class="info">
+            NPO法人やっとこ / NPO法人Art’s Embrace<br>
+            リーフレット / イラスト<br>
+            2018. 02</div>
+        
+        <img src="harmonyland.jpg">
+        <img src="1.jpg">
+        
+ <p>
+アーティストが福祉施設や社会的支援を必要とする人のコミュニティへ赴き、出会いと共働活動を重ねるアートプロジェクト「TURN 」 と、美術家の深澤隆史による、統合失調症や躁鬱病などを持つメンバーの就労支援施設「ハーモニー」を舞台にしたイベント「かみまちハーモニーランド」のリーフレットデザイン。<br>
+<br>
+統合失調症の症状である幻覚・妄想は、本人にとっては紛れもない現実として存在しています。ハーモニーでは日頃から、お互いの幻覚についてのトークセッションを行い、みんなが症状について明るく捉える姿勢で活動をされています。そんな様子を外部の方にも知ってもらうため、少し皮肉を込めてハーモニーをレジャーランドに、そこにいるメンバーをキャラクターに模し、スタンプラリーを行うイベントが「かみまちハーモニーランド」です。裏面には大きく、現実なのか妄想なのか、ごちゃ混ぜにした相関図を配置しました。
+</p>
+    
+    <a href="../index.html"><div class="back">＜ BACK</div></a>
+    </div>
+ 
+ <div class="foot">© Moeri Ito</div>    
+    
+</div>    
+</div>   
+
+<div class="foot"></div>    
+
+</body>
+</html>

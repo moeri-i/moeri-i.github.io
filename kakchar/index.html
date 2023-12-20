@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<title>MOERI ITO WORKS</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">       
+$(function(){
+  var $btn = $('.btn [data-filter]'),
+  $list = $('.list [category]');
+   
+  $btn.on('click', function(e) {
+    e.preventDefault();
+     
+    var $btnTxt = $(this).attr('data-filter');
+     
+    if ($btnTxt == 'all'){
+      $list.fadeOut().promise().done(function() {
+        $list.addClass('animate').fadeIn();
+      });
+    } else {
+      $list.fadeOut().promise().done(function() {
+        $list.filter('[category = "' + $btnTxt + '"]').addClass('animate').fadeIn();
+      });
+    }
+  });
+})
+</script>
+</head>
+    
+<body>
+    
+
+<div class="wrapper">
+
+<div class="content">
+    
+    <div class="head">
+        <a href="../index.html"><h1>MOERI ITO WORKS</h1></a><a href="../prof.html"><span>PROF ＞</span></a>
+    </div>
+    
+    <div class="works_wrapper"> 
+        <div class="title">KACKHAR読本</div>
+        <div class="info">NICオートテック株式会社<br>
+            パンフレット / イラスト<br>
+            2015. 06</div>
+        
+        <img src="kakchar.jpg">
+        <img src="01.jpg">
+        <img src="02.jpg">
+        
+        
+ <p>
+産業用アルミフレームの受注システム「KAKCHAR」を、わかりやすく伝えるためのブックレット。<br>
+アルミフレームを模したヒーロー【カクチャマン】がナビゲーター。カクチャマンが様々な問題を抱えた会社員たちを助ける漫画調のストーリーに、インフォグラフィックスを挟みながら、システムの導入の利点を解説します。
+</p>
+    
+    <a href="../index.html"><div class="back">＜ BACK</div></a>
+    </div>
+   
+     <div class="foot">© Moeri Ito</div>
+    
+</div>    
+</div>   
+    
+</body>
+</html>
