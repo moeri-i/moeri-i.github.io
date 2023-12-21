@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<title>MOERI ITO WORKS</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">       
+$(function(){
+  var $btn = $('.btn [data-filter]'),
+  $list = $('.list [category]');
+   
+  $btn.on('click', function(e) {
+    e.preventDefault();
+     
+    var $btnTxt = $(this).attr('data-filter');
+     
+    if ($btnTxt == 'all'){
+      $list.fadeOut().promise().done(function() {
+        $list.addClass('animate').fadeIn();
+      });
+    } else {
+      $list.fadeOut().promise().done(function() {
+        $list.filter('[category = "' + $btnTxt + '"]').addClass('animate').fadeIn();
+      });
+    }
+  });
+})
+</script>
+</head>
+    
+<body>
+    
+
+<div class="wrapper">
+
+<div class="content">
+    
+    <div class="head">
+        <a href="../index.html"><h1>MOERI ITO WORKS</h1></a><a href="../prof.html"><span>PROF ＞</span></a>
+    </div>
+    
+    <div class="works_wrapper"> 
+        <div class="title">JUC税理士法人</div>
+        <div class="info">
+            ウェブサイト<br>
+            2018. 07</div>
+        
+        <img src="1.png">
+        <img src="2.png">
+        
+ <p>
+<br>
+事務所の看板などに使われている濃い紫色を使用したいとのご依頼の元、グラデーション背景や斜線などの図形を組み合わせ、落ち着いた雰囲気ながらも堅い雰囲気になり過ぎないバランスを意識しました。<br>
+サイト制作にあたり代表の内田先生からいただいた理念のテキストが素晴らしく、ご本人の静かな熱意を持った人間性ともマッチしていると感じ、サイトの設置意図としては顧客拡大では無いとのお話しもあり、あえてトップに長文をそのまま配置する構成としました。
+</p>
+    
+    <a href="../index.html"><div class="back">＜ BACK</div></a>
+    </div>
+ 
+ <div class="foot">© Moeri Ito</div>    
+    
+</div>    
+</div>   
+
+<div class="foot"></div>    
+
+</body>
+</html>
